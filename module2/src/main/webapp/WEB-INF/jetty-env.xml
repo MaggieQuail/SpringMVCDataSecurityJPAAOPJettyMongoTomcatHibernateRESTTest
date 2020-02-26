@@ -1,0 +1,17 @@
+<Configure id='wac' class="org.eclipse.jetty.webapp.WebAppContext">
+<New id="DSTest" class="org.eclipse.jetty.plus.jndi.Resource">
+    <Arg></Arg>
+    <Arg>jdbc/confluence</Arg>
+    <Arg>
+<!--        <New class="org.postgresql.ds.PGSimpleDataSource">-->
+        <New class="org.postgresql.ds.PGSimpleDataSource">
+<!--            <Set name="driverClassName">org.postgresql.Driver</Set>-->
+            <Set name="User">postgres</Set>
+            <Set name="Password">postgres</Set>
+            <Set name="DatabaseName">postgres</Set>
+            <Set name="ServerName">localhost</Set>
+            <Set name="PortNumber">5432</Set>
+        </New>
+    </Arg>
+</New>
+</Configure>
